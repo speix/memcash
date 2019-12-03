@@ -1,5 +1,5 @@
 BINARY_NAME=memcash
-CONTAINER_NAME=speix/$(BINARY_NAME):1.0
+CONTAINER_NAME=supergramm/$(BINARY_NAME):1.0
 
 # Generate protobuf code based on on pb/*.proto files
 proto:
