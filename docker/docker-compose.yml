@@ -9,4 +9,3 @@ memcash:
     - MEMCASH_TICKER_INTERVAL=300
   ports:
     - "5151:5151"
-    - "8888:8888"
