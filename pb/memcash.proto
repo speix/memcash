@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "pb/memcash_messages.proto";
+
+option go_package = "app/pb/v1";
+
+service MemcashService {
+    rpc GetDataFromCache (GetDataRequest) returns (DataResponse) {}
+    rpc SaveDataToCache (SetDataRequest) returns (Response) {}
+}
+
+service HealthService {
+    rpc Check(HealthCheckRequest) returns (HealthCheckResponse) {}
+}

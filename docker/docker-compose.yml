@@ -1,0 +1,12 @@
+memcash:
+  container_name: memcash
+  image: supergramm/memcash:latest
+  restart: always
+  environment:
+    - MEMCASH_GRPC_USER=speixGRPC
+    - MEMCASH_GRPC_PASS=U;n/#y4vEk)_<4XB
+    - MEMCASH_GRPC_PORT=5151
+    - MEMCASH_TICKER_INTERVAL=300
+  ports:
+    - "5151:5151"
+    - "8888:8888"

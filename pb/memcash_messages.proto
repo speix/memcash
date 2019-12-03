@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option go_package = "app/pb/v1";
+
+message Status {
+    bool Error = 1;
+    string Message = 2;
+}
+
+message SetDataRequest {
+    string Key = 1;
+    string Value = 2;
+    int64 Expiration = 3;
+}
+
+message GetDataRequest {
+    string Key = 1;
+}
+
+message DataResponse {
+    Status Status = 1;
+    string Key = 2;
+    string Value = 3;
+    int64 Expiration = 4;
+}
+
+message Response {
+    Status Status = 1;
+}
+
+message HealthCheckRequest {
+    string service = 1;
+}
+
+message HealthCheckResponse {
+    enum ServingStatus {
+        UNKNOWN = 0;
+        SERVING = 1;
+        NOT_SERVING = 2;
+    }
+    ServingStatus status = 1;
+}
